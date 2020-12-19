@@ -9,7 +9,7 @@ import 'package:tannhiet/common/locale.dart';
 void main() {
   final injector = Injector();
   final router = FluroRouter();
-  final locale = Locale()..load('vn');
+  final locale = Locale()..language = 'vn';
   final helper = Helper(locale);
   Routes.configureRoutes(router);
   injector.map((injector) => helper, isSingleton: true);
