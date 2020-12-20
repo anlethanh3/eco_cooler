@@ -14,34 +14,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   @override
   Stream<HomeState> mapEventToState(HomeEvent event) async* {
-    if (event is InCompleteEvent) {
-      yield InCompleteState(repository.getInComplete());
-    } else if (event is CompleteEvent) {
-      yield CompleteState(repository.getComplete());
-    } else if (event is AllEvent) {
-      yield AllState(repository.getAll());
-    } else if (event is AddWorkEvent) {
-      repository.addWork(event.work);
-      repository.saveToDo();
-      yield getUpdateState();
-    } else if (event is UpdateWorkEvent) {
-      repository.updateWork(event.work);
-      repository.saveToDo();
-      yield getUpdateState();
-    } else if (event is DeleteWorkEvent) {
-      repository.deleteWork(event.work);
-      repository.saveToDo();
-      yield getUpdateState();
+    if (event is HomeEvent) {
+      yield HomeSupportState();
     }
-  }
-
-  HomeState getUpdateState() {
-    if (state is InCompleteState) {
-      return InCompleteState(repository.getInComplete());
-    } else if (state is CompleteState) {
-      return CompleteState(repository.getComplete());
-    }
-    return AllState(repository.getAll());
   }
 }
 
@@ -51,46 +26,9 @@ abstract class HomeEvent {}
 @immutable
 abstract class HomeState {}
 
-class InCompleteEvent extends HomeEvent {}
-
 class DefaultHomeState extends HomeState {}
 
-class InCompleteState extends HomeState {
-  final ToDo toDo;
+class HomeSupportState extends HomeState {}
 
-  InCompleteState(this.toDo);
-}
+class HomeSupportEvent extends HomeEvent {}
 
-class CompleteEvent extends HomeEvent {}
-
-class CompleteState extends HomeState {
-  final ToDo toDo;
-
-  CompleteState(this.toDo);
-}
-
-class AllEvent extends HomeEvent {}
-
-class AddWorkEvent extends HomeEvent {
-  final Work work;
-
-  AddWorkEvent(this.work);
-}
-
-class UpdateWorkEvent extends HomeEvent {
-  final Work work;
-
-  UpdateWorkEvent(this.work);
-}
-
-class DeleteWorkEvent extends HomeEvent {
-  final Work work;
-
-  DeleteWorkEvent(this.work);
-}
-
-class AllState extends HomeState {
-  final ToDo toDo;
-
-  AllState(this.toDo);
-}

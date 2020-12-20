@@ -6,6 +6,10 @@ class Locale {
   get facebook => 'https://www.facebook.com/detannhiet/';
   get phone => '0342657040';
 
+  get discount => locales['discount'] ?? '';
+
+  get support => locales['support'] ?? '';
+
   set language(String value) => _locale = value;
 
   get appname => locales['appname'] ?? '';
@@ -99,7 +103,9 @@ class Locale {
                   'bạn chỉ cần mua một lần và có thể sử dụng đến 5 năm, 10 năm tuỳ thích. Thật tuyệt phải không nào ^^! '
                   'Liên hệ ngay với chúng tôi để sở hữu chiếc ',
           'shop4': 'Tư vấn trực tiếp tại trang facebook: ',
-          'shop5': ' hoặc số điện thoại: '
+          'shop5': ' hoặc số điện thoại: ',
+          'discount': 'Giảm giá!',
+          'support': 'Miễn phí\nTư vấn',
         },
       }[_locale];
 }
