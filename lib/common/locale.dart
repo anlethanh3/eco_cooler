@@ -2,13 +2,32 @@ class Locale {
   var _locale = 'vn';
 
   get font => 'Arsenal';
+
   get website => 'tannhietlaptop.vn';
-  get facebook => 'https://www.facebook.com/detannhiet/';
+
+  get facebook => 'https://www.facebook.com/DeTanNhietLaptop/';
+
+  get review =>
+      'https://www.facebook.com/DeTanNhietLaptop/reviews/?ref=page_internal';
+
   get phone => '0342657040';
+
+  get phone2 => '0776979003';
+
+  get shopAddress =>
+      'Chung cư Hoàng Anh Gia Lai 3, Nguyễn Hữu Thọ, Xã Phước Kiển, H. Nhà Bè, TP.HCM';
+
+  get googleMap => 'https://goo.gl/maps/2uaP5mF1WSkXppLq7';
 
   get discount => locales['discount'] ?? '';
 
   get support => locales['support'] ?? '';
+
+  get fanpage => locales['fanpage'] ?? '';
+
+  get contact => locales['contact'] ?? '';
+
+  get address => locales['address'] ?? '';
 
   set language(String value) => _locale = value;
 
@@ -61,9 +80,13 @@ class Locale {
   get shop4 => locales['shop4'] ?? '';
 
   get shop5 => locales['shop5'] ?? '';
+
   get cooler => locales['cooler'] ?? '';
+
   get cooler1 => locales['cooler1'] ?? '';
+
   get cooler2 => locales['cooler2'] ?? '';
+
   get cooler3 => locales['cooler3'] ?? '';
 
   get locales => {
@@ -106,6 +129,9 @@ class Locale {
           'shop5': ' hoặc số điện thoại: ',
           'discount': 'Giảm giá!',
           'support': 'Miễn phí\nTư vấn',
+          'fanpage': 'FANPAGE FACEBOOK',
+          'contact': 'LIÊN HỆ:',
+          'address': 'ĐỊA CHỈ:',
         },
       }[_locale];
 }

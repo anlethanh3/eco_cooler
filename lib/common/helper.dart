@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_money_formatter/flutter_money_formatter.dart';
 import 'package:tannhiet/common/locale.dart';
-import 'package:tannhiet/model/todo.dart';
 
 class Helper {
   final Locale locale;
@@ -12,7 +11,6 @@ class Helper {
   Helper(this.locale);
 
   final key = 'data';
-  ToDo todo = ToDo(works: []);
 
   Future<void> load() async {}
 
