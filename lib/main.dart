@@ -6,7 +6,7 @@ import 'package:tannhiet/common/helper.dart';
 import 'package:tannhiet/common/routes.dart';
 import 'package:tannhiet/common/locale.dart';
 
-void main() {
+void main() async{
   final injector = Injector();
   final router = FluroRouter();
   final locale = Locale()..language = 'vn';

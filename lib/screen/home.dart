@@ -425,25 +425,25 @@ class _HomeState extends State<Home> {
                                         mainAxisSpacing: 8,
                                         children: [
                                           [
-                                            'p1.webp',
+                                            'p1.jpg',
                                             'Đế tản nhiệt quạt RGB AURA',
                                             1800000,
                                             1499000,
                                           ],
                                           [
-                                            'p2.webp',
+                                            'p2.jpg',
                                             'Tản nhiệt laptop CF-3200',
                                             1000000,
                                             990000,
                                           ],
                                           [
-                                            'p3.webp',
+                                            'p3.jpg',
                                             'Tản nhiệt laptop CF-2000',
                                             900000,
                                             800000,
                                           ],
                                           [
-                                            'p4.webp',
+                                            'p4.jpg',
                                             'Tản nhiệt laptop CF-1200',
                                             700000,
                                             600000,
@@ -611,15 +611,15 @@ class _HomeState extends State<Home> {
                             ? Column(
                                 children: [
                                   [
-                                    'messenger.webp',
+                                    'messenger.jpg',
                                     'https://www.messenger.com/t/1522654404709115',
                                   ],
                                   [
-                                    'zalo.webp',
+                                    'zalo.jpg',
                                     'https://zalo.me/01226979003',
                                   ],
                                   [
-                                    'phone.webp',
+                                    'phone.jpg',
                                     'tel:+84 776 979 003',
                                   ],
                                 ]
