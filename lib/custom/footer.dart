@@ -152,9 +152,10 @@ class Footer extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Container(
-                  height: 170,
-                  child: CustomMap(onTapMap),
+                Expanded(
+                  child: Container(
+                    child: CustomMap(onTapMap),
+                  ),
                 )
               ],
             ),
